@@ -19,8 +19,7 @@ def point_total():
     for row in c.fetchall():
         num = row[0]
         total += num
-    #print("Blake's currently has %s points" %(total))
-    display_total = ("Blake currently has %s points." %(total))
+    display_total = ("User currently has %s points." %(total))
     return display_total
 
 def add_points(Event):
@@ -44,7 +43,7 @@ def redeem_points(Event):
     redeemEntry.delete(0,"end")    
 
 root = Tk()
-root.title("Blake's Points")
+root.title("Users's Points")
 
 display_total = point_total()
   
